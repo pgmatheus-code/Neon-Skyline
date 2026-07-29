@@ -10,6 +10,10 @@ LOGO_HEIGHT = 210
 MENU_OPT_SIZE = 25
 SIGN_SIZE = 15
 
+# font file
+FONT_SMALLFONTS = './assets/fonts/BULKYPIX.TTF'
+FONT_LARGEFONTS = './assets/fonts/Thirteen-Pixel-Fonts.ttf'
+
 # color
 NEON_SALMON = (255,231,189)
 NEON_PURPLE = (100,6,189)
