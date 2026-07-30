@@ -30,11 +30,15 @@ MAIN_MENU_OPT = (
 # background layers speed
 BACKGROUND_SPEED = {
     'city1/layer1': 0,
-    'city1/layer2': 2,
-    'city1/layer3': 3,
-    'city1/layer4': 4,
-    'city1/layer5': 5,
-    'city1/layer6': 6,
-    'city1/layer7': 7,
-    'city1/layer8': 8,
+    'city1/layer2': 0.5,
+    'city1/layer3': 1,
+    'city1/layer4': 1.5,
+    'city1/layer5': 2,
+    'city1/layer6': 2.5,
+    'city1/layer7': 3,
+    'city1/layer8': 3.5,
 }
+
+# global level settings
+LEVEL_FPS = 60
+STANDARD_TIMEOUT = 20000

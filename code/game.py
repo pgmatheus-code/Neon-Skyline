@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import sys
+
 import pygame
 
 from code.const import WIN_WIDTH, WIN_HEIGHT, MAIN_MENU_OPT
@@ -23,4 +25,4 @@ class Game:
                 pass
             if menu_return == MAIN_MENU_OPT[2]: # quit game
                 pygame.quit()
-                quit()
+                sys.exit()
