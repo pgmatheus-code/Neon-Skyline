@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import pygame.image
-from pygame import Rect, Surface
+from pygame import Rect, Surface, KEYDOWN, KEYUP
 from pygame.font import Font
 from code.const import WIN_WIDTH, WIN_HEIGHT, LOGO_WIDTH, LOGO_HEIGHT, SIGN_SIZE, NEON_SALMON, MAIN_MENU_OPT, \
-    MENU_OPT_SIZE, NEON_PINK, FONT_SMALLFONTS, FONT_LARGEFONTS
+    MENU_OPT_SIZE, NEON_PINK, FONT_SMALLFONTS, FONT_LARGEFONTS, NEON_PURPLE, NEON_CYAN
 
 
 class Menu:
@@ -12,7 +12,7 @@ class Menu:
         self.window = window
 
         # background
-        self.background = pygame.image.load('./assets/sprites/scenery/main_menu_background.png')
+        self.background = pygame.image.load('./assets/sprites/background/main_menu_background.png')
         self.background = pygame.transform.scale(self.background, self.window.get_size())
         self.rect = self.background.get_rect(topleft=(0, 0))
 
@@ -23,41 +23,100 @@ class Menu:
             topleft=((WIN_WIDTH / 2) - (LOGO_WIDTH / 2), (WIN_HEIGHT / 3.3) - (LOGO_HEIGHT / 2)))
 
     def run(self, ):
+        selected_option = 0
+
         # music
         pygame.mixer.music.load('./assets/sounds/main_menu.mp3')
         pygame.mixer.music.play(-1) # minus one for loop
 
 
         while True:
+            # DRAW -----------------------------------------------------------------------------------------------------
             # image
             self.window.blit(source=self.background, dest=self.rect)
             self.window.blit(source=self.logo, dest=self.small_rect)
 
             # main menu
             for i in range(len(MAIN_MENU_OPT)):
-                self.menu_text_custom_font(FONT_LARGEFONTS, MENU_OPT_SIZE, MAIN_MENU_OPT[i], NEON_SALMON, (WIN_WIDTH/2, 250 + 35 * i) )
+                if i == selected_option:
+                    menuOptStr = f'> {MAIN_MENU_OPT[i]} <'
+                    color = NEON_PINK
+                else:
+                    menuOptStr = MAIN_MENU_OPT[i]
+                    color = NEON_PURPLE
 
-            # sign
+                # menu opt pos
+                menuOptX = (WIN_WIDTH / 2)
+                menuOptY = (270 + 35 * i)
+
+                # color shadow
+                self.menu_text_custom_font(
+                    font_path=FONT_LARGEFONTS,
+                    text_size=MENU_OPT_SIZE,
+                    text=menuOptStr,
+                    text_color=NEON_CYAN,
+                    text_center_pos=(menuOptX + 2, menuOptY + 2)
+                )
+
+                # color main
+                self.menu_text_custom_font(
+                    font_path=FONT_LARGEFONTS,
+                    text_size=MENU_OPT_SIZE,
+                    text=menuOptStr,
+                    text_color=color,
+                    text_center_pos=(menuOptX, menuOptY)
+                )
+
+            signStr = 'Created by: pgmatheus-code'
+            signX = WIN_WIDTH - 160
+            signY = WIN_HEIGHT - SIGN_SIZE
+
+            # sign shadow
             self.menu_text_custom_font(
-                font_path=FONT_SMALLFONTS, text_size=SIGN_SIZE, text='Created by: pgmatheus-code', text_color=NEON_SALMON,
-                text_center_pos=(WIN_WIDTH - 160, WIN_HEIGHT - SIGN_SIZE)
+                font_path=FONT_SMALLFONTS,
+                text_size=SIGN_SIZE,
+                text=signStr,
+                text_color=NEON_PURPLE,
+                text_center_pos=(signX + 1, signY + 1)
             )
 
+            # sign main
+            self.menu_text_custom_font(
+                font_path=FONT_SMALLFONTS,
+                text_size=SIGN_SIZE,
+                text=signStr,
+                text_color=NEON_PINK,
+                text_center_pos=(signX, signY)
+            )
             # draw everything
             pygame.display.flip()
 
+            # EVENTS ---------------------------------------------------------------------------------------------------
             # checking all events
             for event in pygame.event.get():
+
+                # quit events
                 if event.type == pygame.QUIT:
                     pygame.quit()  # end pygame
                     quit()  # close window
 
+                if event.type == KEYDOWN:
+                    # directional events
+                    if event.key == pygame.K_UP:
+                        if selected_option > 0:
+                            selected_option -= 1
+                        else:
+                            selected_option = len(MAIN_MENU_OPT) - 1
+                    elif event.key == pygame.K_DOWN:
+                        if selected_option < len(MAIN_MENU_OPT) - 1:
+                            selected_option += 1
+                        else:
+                            selected_option = 0
 
-    def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
-        text_font: Font = pygame.font.SysFont(name='Comic Sans MS', size=text_size)
-        text_surface: Surface = text_font.render(text, True, text_color).convert_alpha()
-        text_rect: Rect = text_surface.get_rect(center=text_center_pos)
-        self.window.blit(source=text_surface, dest=text_rect)
+                    # enter events
+                    if event.key == pygame.K_RETURN:
+                        pygame.mixer.music.stop()
+                        return MAIN_MENU_OPT[selected_option]
 
     def menu_text_custom_font(self, font_path: str, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
         # Load font from given path
