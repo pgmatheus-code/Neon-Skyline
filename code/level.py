@@ -6,20 +6,23 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS
+from code.const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS, MAIN_MENU_OPT
 from code.entity import Entity
 from code.entityFactory import EntityFactory
 
 
 class Level:
     def __init__(self, window, name, game_mode):
+        self.timeout = STANDARD_TIMEOUT
         self.window = window
         self.name = name
         self.game_mode = game_mode
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('city2'))
         self.entity_list.append(EntityFactory.get_entity('player1'))
-        self.timeout = STANDARD_TIMEOUT
+        if game_mode in [MAIN_MENU_OPT[1], MAIN_MENU_OPT[2]]:
+            self.entity_list.append(EntityFactory.get_entity('player2'))
+
 
     def run(self):
         # music

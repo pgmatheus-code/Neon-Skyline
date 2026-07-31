@@ -6,7 +6,8 @@ import pygame.image
 from pygame import Rect, Surface, KEYDOWN
 from pygame.font import Font
 from code.const import WIN_WIDTH, WIN_HEIGHT, LOGO_WIDTH, LOGO_HEIGHT, SIGN_SIZE, MAIN_MENU_OPT, \
-    MENU_OPT_SIZE, NEON_PINK, FONT_SMALLFONTS, FONT_LARGEFONTS, NEON_PURPLE, NEON_CYAN
+    MENU_OPT_SIZE, NEON_PINK, FONT_SMALLFONTS, FONT_LARGEFONTS, NEON_PURPLE, NEON_CYAN, MENU_OPT_SPACING, MENU_HEIGHT, \
+    SHADOW_COLOR, SHADOW_DIRECTION
 
 
 class Menu:
@@ -49,7 +50,7 @@ class Menu:
 
                 # menu opt pos
                 menu_opt_x = (WIN_WIDTH / 2)
-                menu_opt_y = (270 + 35 * i)
+                menu_opt_y = (MENU_HEIGHT + MENU_OPT_SPACING * i)
 
                 # color main
                 self.menu_text(
@@ -106,8 +107,15 @@ class Menu:
         text_font: pygame.font.Font = pygame.font.Font(font_path, text_size)
 
         # shadow
-        text_shadow_surface: Surface = text_font.render(text, True, NEON_CYAN).convert_alpha()
-        text_shadow_rect: Rect = text_shadow_surface.get_rect(center=(text_pos[0] + 1, text_pos[1] + 1))
+        text_shadow2_surface: Surface = text_font.render(text, True, SHADOW_COLOR).convert_alpha()
+        text_shadow2_rect: Rect = text_shadow2_surface.get_rect(
+            center=(text_pos[0] - SHADOW_DIRECTION[0], text_pos[1] - SHADOW_DIRECTION[1]))
+        self.window.blit(source=text_shadow2_surface, dest=text_shadow2_rect)
+
+        # shadow
+        text_shadow_surface: Surface = text_font.render(text, True, SHADOW_COLOR).convert_alpha()
+        text_shadow_rect: Rect = text_shadow_surface.get_rect(
+            center=(text_pos[0] + SHADOW_DIRECTION[0], text_pos[1] + SHADOW_DIRECTION[1]))
         self.window.blit(source=text_shadow_surface, dest=text_shadow_rect)
 
         # main

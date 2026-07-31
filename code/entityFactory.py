@@ -17,7 +17,7 @@ class EntityFactory:
                     list_bg.append(Background(name=f'{entity_name}/layer{i + 1}', position=(WIN_WIDTH, 0)))
                 return list_bg
             case 'player1':
-                return Player(name='player1', position=(10, WIN_HEIGHT / 2))
+                return Player(name='player1', position=(10, (WIN_HEIGHT / 2) - 15))
             case 'player2':
-                return Player(name='player2', position=(10, WIN_HEIGHT / 2))
+                return Player(name='player2', position=(10, (WIN_HEIGHT / 2) + 15))
         return None

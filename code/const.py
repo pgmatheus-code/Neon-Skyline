@@ -1,14 +1,12 @@
 # window size
+import pygame
+
 WIN_WIDTH = 800
 WIN_HEIGHT = 420
 
 # logo size
 LOGO_WIDTH = 400
 LOGO_HEIGHT = 210
-
-# font size
-MENU_OPT_SIZE = 50
-SIGN_SIZE = 15
 
 # font file
 FONT_SMALLFONTS = './assets/fonts/BULKYPIX.TTF'
@@ -20,9 +18,19 @@ NEON_PURPLE = (100,6,189)
 NEON_PINK = (255,20,189)
 NEON_CYAN = (96,249,253)
 
-# main menu options
+
+# main menu
+MENU_HEIGHT = 235
+MENU_OPT_SIZE = 55
+MENU_OPT_SPACING = 30
+SIGN_SIZE = 15
+SHADOW_COLOR = NEON_CYAN
+SHADOW_DIRECTION = (1, 1)
+
 MAIN_MENU_OPT = (
-    'NEW GAME',
+    'NEW GAME - 1P',
+    'NEW GAME - 2P (VS)',
+    'NEW GAME - 2P (COOP)',
     'SCOREBOARD',
     'QUIT GAME'
 )
@@ -45,3 +53,32 @@ STANDARD_TIMEOUT = 20000
 
 # player defaults
 PLAYER_SPEED = 5
+
+# key binding
+KEY_UP =\
+    {
+        'player1': pygame.K_w,
+        'player2': pygame.K_UP
+    }
+
+KEY_DOWN =\
+    {
+        'player1': pygame.K_s,
+        'player2': pygame.K_DOWN
+    }
+
+KEY_LEFT =\
+    {
+        'player1': pygame.K_a,
+        'player2': pygame.K_LEFT
+    }
+KEY_RIGHT =\
+    {
+        'player1': pygame.K_d,
+        'player2': pygame.K_RIGHT
+    }
+KEY_SHOOT =\
+    {
+        'player1': pygame.K_LSHIFT,
+        'player2': pygame.K_RSHIFT
+    }
