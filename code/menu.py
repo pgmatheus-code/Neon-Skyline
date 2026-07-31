@@ -3,9 +3,9 @@
 import sys
 
 import pygame.image
-from pygame import Rect, Surface, KEYDOWN, KEYUP
+from pygame import Rect, Surface, KEYDOWN
 from pygame.font import Font
-from code.const import WIN_WIDTH, WIN_HEIGHT, LOGO_WIDTH, LOGO_HEIGHT, SIGN_SIZE, NEON_SALMON, MAIN_MENU_OPT, \
+from code.const import WIN_WIDTH, WIN_HEIGHT, LOGO_WIDTH, LOGO_HEIGHT, SIGN_SIZE, MAIN_MENU_OPT, \
     MENU_OPT_SIZE, NEON_PINK, FONT_SMALLFONTS, FONT_LARGEFONTS, NEON_PURPLE, NEON_CYAN
 
 
@@ -41,36 +41,36 @@ class Menu:
             # main menu
             for i in range(len(MAIN_MENU_OPT)):
                 if i == selected_option:
-                    menuOptStr = f'> {MAIN_MENU_OPT[i]} <'
+                    menu_opt_str = f'> {MAIN_MENU_OPT[i]} <'
                     color = NEON_PINK
                 else:
-                    menuOptStr = MAIN_MENU_OPT[i]
+                    menu_opt_str = MAIN_MENU_OPT[i]
                     color = NEON_PURPLE
 
                 # menu opt pos
-                menuOptX = (WIN_WIDTH / 2)
-                menuOptY = (270 + 35 * i)
+                menu_opt_x = (WIN_WIDTH / 2)
+                menu_opt_y = (270 + 35 * i)
 
                 # color main
                 self.menu_text(
                     font_path=FONT_LARGEFONTS,
                     text_size=MENU_OPT_SIZE,
-                    text=menuOptStr,
+                    text=menu_opt_str,
                     text_color=color,
-                    text_pos=(menuOptX, menuOptY)
+                    text_pos=(menu_opt_x, menu_opt_y)
                 )
 
-            signStr = 'Created by: pgmatheus-code'
-            signX = WIN_WIDTH - 160
-            signY = WIN_HEIGHT - SIGN_SIZE
+            sign_str = 'Created by: pgmatheus-code'
+            sign_x = WIN_WIDTH - 160
+            sign_y = WIN_HEIGHT - SIGN_SIZE
 
             # sign main
             self.menu_text(
                 font_path=FONT_SMALLFONTS,
                 text_size=SIGN_SIZE,
-                text=signStr,
+                text=sign_str,
                 text_color=NEON_PINK,
-                text_pos=(signX, signY)
+                text_pos=(sign_x, sign_y)
             )
             # draw everything
             pygame.display.flip()

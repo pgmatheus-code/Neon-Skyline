@@ -5,13 +5,13 @@ from abc import ABC, abstractmethod
 import pygame
 
 class Entity(ABC):
-    def __init__(self, type: str, name: str, position: tuple):
+    def __init__(self, entity_type: str, name: str, position: tuple, auto_stretch: bool = False):
         self.name = name
-        self.surf = pygame.image.load(f'./assets/sprites/{type}/{name}.png').convert_alpha()
-        #self.surf = pygame.transform.scale(self.surf, self.window.get_size()) # stretch
+        self.surf = pygame.image.load(f'./assets/sprites/{entity_type}/{name}.png').convert_alpha()
         self.rect = self.surf.get_rect(left=position[0], top=position[1])
+        self.auto_stretch = auto_stretch
         self.speed = 0
 
     @abstractmethod
-    def move(self, ):
+    def move(self):
         pass

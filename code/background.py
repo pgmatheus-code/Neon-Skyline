@@ -5,10 +5,11 @@ from code.entity import Entity
 
 class Background(Entity):
     def __init__(self, name: str, position: tuple):
-        super().__init__('background', name, position)
+        super().__init__('background', name, position, True)
 
     def move(self):
-        self.rect.centerx -= BACKGROUND_SPEED[self.name] # scrolling movement
+        layer_name = self.name[6:]
+        self.rect.centerx -= BACKGROUND_SPEED[layer_name] # scrolling movement
 
         # reset scrolling at the end
         if self.rect.right <= 0:

@@ -6,7 +6,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.const import FONT_SMALLFONTS, NEON_SALMON, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS
+from code.const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS
 from code.entity import Entity
 from code.entityFactory import EntityFactory
 
@@ -17,7 +17,8 @@ class Level:
         self.name = name
         self.game_mode = game_mode
         self.entity_list: list[Entity] = []
-        self.entity_list.extend(EntityFactory.get_entity('city1'))
+        self.entity_list.extend(EntityFactory.get_entity('city2'))
+        self.entity_list.append(EntityFactory.get_entity('player1'))
         self.timeout = STANDARD_TIMEOUT
 
     def run(self):
@@ -29,7 +30,9 @@ class Level:
         while True:
             clock.tick(LEVEL_FPS)
             for entity in self.entity_list:
-                entity.surf = pygame.transform.scale(entity.surf, self.window.get_size()) # stretch
+                if entity.auto_stretch:
+                    entity.surf = pygame.transform.scale(entity.surf, self.window.get_size()) # stretch
+
                 self.window.blit(source=entity.surf, dest=entity.rect) # apply
                 entity.move() # movement
 
