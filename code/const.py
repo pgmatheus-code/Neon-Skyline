@@ -47,6 +47,21 @@ BACKGROUND_SPEED = {
     'layer8': 3.5,
 }
 
+# foes
+FOE_SPAWNING_INTERVAL = 3000
+FOE_EVENT = pygame.USEREVENT + 1
+FOE_SPEED_MULTIPLIER = 2
+FOE_SHIP_DICT = {
+    'small_1' : 2.5,
+    'small_2' : 2.5,
+    'medium_1' : 1.5,
+    'medium_2': 1.5,
+    'medium_3': 1.5,
+    'large_1': 0.5,
+    'large_2': 0.5,
+    'large_3' : 0.5
+}
+
 # global level settings
 LEVEL_FPS = 60
 STANDARD_TIMEOUT = 20000
@@ -79,6 +94,6 @@ KEY_RIGHT =\
     }
 KEY_SHOOT =\
     {
-        'player1': pygame.K_LSHIFT,
-        'player2': pygame.K_RSHIFT
+        'player1': pygame.K_SPACE,
+        'player2': pygame.K_KP_PLUS
     }

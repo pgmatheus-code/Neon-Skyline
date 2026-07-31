@@ -87,12 +87,12 @@ class Menu:
 
                 if event.type == KEYDOWN:
                     # directional events
-                    if event.key == pygame.K_UP:
+                    if event.key == pygame.K_UP or event.key == pygame.K_w:
                         if selected_option > 0:
                             selected_option -= 1
                         else:
                             selected_option = len(MAIN_MENU_OPT) - 1
-                    elif event.key == pygame.K_DOWN:
+                    elif event.key == pygame.K_DOWN or event.key == pygame.K_s:
                         if selected_option < len(MAIN_MENU_OPT) - 1:
                             selected_option += 1
                         else:

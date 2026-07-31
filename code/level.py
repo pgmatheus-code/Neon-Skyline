@@ -6,22 +6,27 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS, MAIN_MENU_OPT
+from code.const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS, MAIN_MENU_OPT, \
+    FOE_EVENT, FOE_SPAWNING_INTERVAL
 from code.entity import Entity
 from code.entityFactory import EntityFactory
 
 
 class Level:
     def __init__(self, window, name, game_mode):
+        # attributes
         self.timeout = STANDARD_TIMEOUT
         self.window = window
         self.name = name
         self.game_mode = game_mode
+
+        # spawning
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('city2'))
         self.entity_list.append(EntityFactory.get_entity('player1'))
         if game_mode in [MAIN_MENU_OPT[1], MAIN_MENU_OPT[2]]:
             self.entity_list.append(EntityFactory.get_entity('player2'))
+        pygame.time.set_timer(FOE_EVENT, FOE_SPAWNING_INTERVAL)
 
 
     def run(self):
@@ -43,6 +48,8 @@ class Level:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+                if event.type == FOE_EVENT:
+                    self.entity_list.append(EntityFactory.get_entity('foe'))
 
             # UI
             self.level_text(18, f'{self.name} - Timeout: {self.timeout / 1000 : .1f}s', NEON_PINK, (10, 10))
