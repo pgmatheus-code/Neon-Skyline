@@ -6,10 +6,11 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS, MAIN_MENU_OPT, \
+from code.Const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS, MAIN_MENU_OPT, \
     FOE_EVENT, FOE_SPAWNING_INTERVAL
-from code.entity import Entity
-from code.entityFactory import EntityFactory
+from code.Entity import Entity
+from code.EntityFactory import EntityFactory
+from code.EntityMediator import EntityMediator
 
 
 class Level:
@@ -22,7 +23,7 @@ class Level:
 
         # spawning
         self.entity_list: list[Entity] = []
-        self.entity_list.extend(EntityFactory.get_entity('city2'))
+        self.entity_list.extend(EntityFactory.get_entity('city3'))
         self.entity_list.append(EntityFactory.get_entity('player1'))
         if game_mode in [MAIN_MENU_OPT[1], MAIN_MENU_OPT[2]]:
             self.entity_list.append(EntityFactory.get_entity('player2'))
@@ -56,6 +57,10 @@ class Level:
             self.level_text(14, f'fps: {clock.get_fps():.0f}', NEON_PINK, (10, WIN_HEIGHT - 35))
             self.level_text(14, f'entities: {len(self.entity_list)}', NEON_PINK, (10, WIN_HEIGHT - 20))
             pygame.display.flip() # refresh
+
+            # Entity mediator - entity damage and destruction
+            EntityMediator.verify_collision(entity_list=self.entity_list)
+            EntityMediator.verify_health(entity_list=self.entity_list)
 
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         # shadow

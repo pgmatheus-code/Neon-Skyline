@@ -2,18 +2,18 @@
 # -*- coding: utf-8 -*-
 import random
 
-from code.const import FOE_SHIP_DICT, BACKGROUND_SPEED, WIN_WIDTH, FOE_SPEED_MULTIPLIER
-from code.entity import Entity
-
+from code.Const import FOE_SHIP_DICT, BACKGROUND_SPEED, WIN_WIDTH, FOE_SPEED_MULTIPLIER, ENTITY_DEFAULT_HEALTH
+from code.Entity import Entity
 
 class Foe(Entity):
     def __init__(self, name: str, position: tuple, auto_stretch: bool = False):
         #pick random
-        random.choice(list(FOE_SHIP_DICT.keys()))
         foe_ship_size = random.choice(list(FOE_SHIP_DICT.keys()))
-
-        super().__init__('ship', f'{name}_ship_{foe_ship_size}', position)
+        super().__init__(entity_type='ship', name=f'{name}_ship_{foe_ship_size}', position=position, health=ENTITY_DEFAULT_HEALTH[f'foe_{foe_ship_size}'])
         self.current_foe_speed = FOE_SHIP_DICT[foe_ship_size]
+
+        # debug
+        #print(f'spawned foe_{foe_ship_size} with health = {self.health}')
 
     def move(self):
         layer_name = self.name[6:]

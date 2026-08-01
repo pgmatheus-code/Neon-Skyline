@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 import random
 
-from code.background import Background
-from code.const import WIN_WIDTH, WIN_HEIGHT
-from code.foe import Foe
-from code.player import Player
+from code.Background import Background
+from code.Const import WIN_WIDTH, WIN_HEIGHT
+from code.Foe import Foe
+from code.Player import Player
 
 
 class EntityFactory:
@@ -24,5 +24,5 @@ class EntityFactory:
             case 'player2':
                 return Player(name='player2', position=(10, (WIN_HEIGHT / 2) + 15))
             case 'foe':
-                return Foe(name='foe', position=(WIN_WIDTH + 20, random.randint(20, WIN_HEIGHT - 20)))
+                return Foe(name='foe', position=(WIN_WIDTH + 20, random.randint(10, WIN_HEIGHT - 50)))
         return None

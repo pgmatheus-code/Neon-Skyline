@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from code.const import WIN_WIDTH, BACKGROUND_SPEED
-from code.entity import Entity
+from code.Const import WIN_WIDTH, BACKGROUND_SPEED
+from code.Entity import Entity
 
 class Background(Entity):
     def __init__(self, name: str, position: tuple):
-        super().__init__('background', name, position, True)
+        super().__init__(entity_type='background', name=name, position=position, health=999, auto_stretch=True)
 
     def move(self):
         layer_name = self.name[6:]

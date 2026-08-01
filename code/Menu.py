@@ -5,7 +5,7 @@ import sys
 import pygame.image
 from pygame import Rect, Surface, KEYDOWN
 from pygame.font import Font
-from code.const import WIN_WIDTH, WIN_HEIGHT, LOGO_WIDTH, LOGO_HEIGHT, SIGN_SIZE, MAIN_MENU_OPT, \
+from code.Const import WIN_WIDTH, WIN_HEIGHT, LOGO_WIDTH, LOGO_HEIGHT, SIGN_SIZE, MAIN_MENU_OPT, \
     MENU_OPT_SIZE, NEON_PINK, FONT_SMALLFONTS, FONT_LARGEFONTS, NEON_PURPLE, NEON_CYAN, MENU_OPT_SPACING, MENU_HEIGHT, \
     SHADOW_COLOR, SHADOW_DIRECTION
 
