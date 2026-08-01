@@ -1,5 +1,7 @@
+from code.Const import WIN_WIDTH
 from code.Entity import Entity
 from code.Foe import Foe
+from code.PlayerShot import PlayerShot
 
 
 class EntityMediator:
@@ -7,6 +9,9 @@ class EntityMediator:
     def __verify_collision_window(entity: Entity): # private
         if isinstance(entity, Foe): # similar to if (entity is Foe) from c#
             if entity.rect.right < 0:
+                entity.health = 0
+        if isinstance(entity, PlayerShot): # similar to if (entity is Foe) from c#
+            if entity.rect.left > WIN_WIDTH:
                 entity.health = 0
 
     @staticmethod

@@ -11,6 +11,8 @@ from code.Const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPL
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 from code.EntityMediator import EntityMediator
+from code.Foe import Foe
+from code.Player import Player
 
 
 class Level:
@@ -44,6 +46,10 @@ class Level:
 
                 self.window.blit(source=entity.surf, dest=entity.rect) # apply
                 entity.move() # movement
+                if isinstance(entity, (Player)):
+                    shot = entity.shoot()
+                    if shot is not None:
+                        self.entity_list.append(shot)
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:

@@ -4,6 +4,7 @@ import pygame
 from code.Const import PLAYER_SPEED, KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN, KEY_SHOOT, WIN_HEIGHT, WIN_WIDTH, \
     ENTITY_DEFAULT_HEALTH
 from code.Entity import Entity
+from code.PlayerShot import PlayerShot
 
 
 class Player(Entity):
@@ -22,3 +23,11 @@ class Player(Entity):
             self.rect.centery -= PLAYER_SPEED
         if pressed_key[KEY_DOWN[player_name]] and self.rect.bottom < WIN_HEIGHT - 10:
             self.rect.centery += PLAYER_SPEED
+
+    def shoot(self):
+        pressed_key = pygame.key.get_pressed()
+        player_name = self.name[:7]
+
+        if pressed_key[KEY_SHOOT[player_name]]:
+            print(player_name)
+            return PlayerShot(name=f'{player_name}_shot', position=(self.rect.centerx, self.rect.centery))

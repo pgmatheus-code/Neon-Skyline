@@ -46,7 +46,8 @@ BACKGROUND_SPEED = {
     'layer8': 3.5,
 }
 
-# entity default health
+# entity defaults
+SHOT_DEFAULT_SPEED = 20
 ENTITY_DEFAULT_HEALTH = {
     'player': 300,
     'foe_small_1': 50,
@@ -81,7 +82,6 @@ STANDARD_TIMEOUT = 20000
 
 # player defaults
 PLAYER_SPEED = 5
-
 # key binding
 KEY_UP =\
     {

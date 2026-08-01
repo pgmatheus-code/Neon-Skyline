@@ -6,7 +6,7 @@ from code.Const import FOE_SHIP_DICT, BACKGROUND_SPEED, WIN_WIDTH, FOE_SPEED_MUL
 from code.Entity import Entity
 
 class Foe(Entity):
-    def __init__(self, name: str, position: tuple, auto_stretch: bool = False):
+    def __init__(self, name: str, position: tuple):
         #pick random
         foe_ship_size = random.choice(list(FOE_SHIP_DICT.keys()))
         super().__init__(entity_type='ship', name=f'{name}_ship_{foe_ship_size}', position=position, health=ENTITY_DEFAULT_HEALTH[f'foe_{foe_ship_size}'])
