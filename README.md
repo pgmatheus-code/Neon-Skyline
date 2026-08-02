@@ -81,7 +81,7 @@ mechanics.
 ## ▶️ How to Play
 
 1. Clone or download the repository.
-2. Run the game executable or launch via your preferred Python environment.
+2. Build a game executable using cx_freeze or launch it via your preferred Python environment.
 3. Choose your mode: 1P, 2P Versus, or 2P Coop.
 4. Survive the skyline, rack up points, and dominate the scoreboard!
 
