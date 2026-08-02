@@ -43,6 +43,9 @@ class Level:
         pygame.time.set_timer(TIMEOUT_EVENT, TIMEOUT_STEP)
 
     def run(self, player_score: list[int]):
+        # Initialize mixer
+        pygame.mixer.init()
+
         # music
         pygame.mixer.music.load(f'./assets/sounds/{self.name}.mp3')
         pygame.mixer.music.play(-1)  # minus one for loop
@@ -68,6 +71,18 @@ class Level:
                     shot = entity.shoot()
                     if shot is not None:
                         self.entity_list.append(shot)
+
+                        entity_formatted_name = ''
+
+                        if entity.name in ['player1_ship', 'player2_ship']:
+                            entity_formatted_name = entity.name[:-5]
+                        elif entity.name[:3] == 'foe':
+                            entity_formatted_name = 'foe'
+
+                        if entity_formatted_name != '':
+                            shoot_sfx = pygame.mixer.Sound(f'./assets/sounds/{entity_formatted_name}_shot.mp3')
+                            shoot_sfx.set_volume(0.4)
+                            shoot_sfx.play()
 
                 # player hud
                 if entity.name == 'player1_ship':

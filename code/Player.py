@@ -47,5 +47,6 @@ class Player(Entity):
         if pressed_key[KEY_SHOOT[player_name]] and self.is_shot_ready:
             self.shot_timer = PLAYER_SHOT_DELAY
             self.is_shot_ready = False
+
             return PlayerShot(name=f'{player_name}_shot', position=(self.rect.centerx, self.rect.centery))
         return None
