@@ -1,4 +1,4 @@
-from code.Const import ENTITY_DEFAULT_HEALTH, SHOT_DEFAULT_SPEED, ENTITY_DEFAULT_DAMAGE
+from code.Const import ENTITY_DEFAULT_HEALTH, SHOT_DEFAULT_SPEED, ENTITY_DEFAULT_DAMAGE, FOE_SCORE
 from code.Entity import Entity
 
 class FoeShot(Entity):
@@ -8,7 +8,8 @@ class FoeShot(Entity):
             name=name,
             position=position,
             health=ENTITY_DEFAULT_HEALTH['shot'],
-            damage=ENTITY_DEFAULT_DAMAGE[f'{entity_name[:-2]}_shot']
+            damage=ENTITY_DEFAULT_DAMAGE[f'{entity_name[:-2]}_shot'],
+            score=0
         )
 
     def move(self):

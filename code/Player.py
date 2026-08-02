@@ -14,7 +14,8 @@ class Player(Entity):
             name=f'{name}_ship',
             position=position,
             health=ENTITY_DEFAULT_HEALTH['player'],
-            damage=ENTITY_DEFAULT_DAMAGE['player']
+            damage=ENTITY_DEFAULT_DAMAGE['player'],
+            score=0
         )
 
         self.shot_timer = PLAYER_SHOT_DELAY

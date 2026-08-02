@@ -96,6 +96,17 @@ FOE_SHIP_DICT = {
     'large_3' : 2
 }
 
+FOE_SCORE = {
+    'foe_small_1': 25,
+    'foe_small_2': 25,
+    'foe_medium_1': 50,
+    'foe_medium_2': 50,
+    'foe_medium_3': 50,
+    'foe_large_1': 100,
+    'foe_large_2': 100,
+    'foe_large_3': 100,
+}
+
 # global level settings
 LEVEL_FPS = 60
 STANDARD_TIMEOUT = 20000

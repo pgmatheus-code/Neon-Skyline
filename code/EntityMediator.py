@@ -29,6 +29,17 @@ class EntityMediator:
                 EntityMediator.__verify_collision_entity(entity_list[i], entity_list[j])
 
     @staticmethod
+    def __give_score(foe: Foe, entity_list: list[Entity]):
+        if foe.last_dmg == 'player1_shot':
+            for entity in entity_list:
+                if entity.name == 'player1_ship':
+                    entity.score += foe.score
+        elif foe.last_dmg == 'player2_shot':
+            for entity in entity_list:
+                if entity.name == 'player2_ship':
+                    entity.score += foe.score
+
+    @staticmethod
     def __verify_collision_entity(entity1: Entity, entity2: Entity):  # private
 
         # avoid friendly fire
@@ -56,5 +67,9 @@ class EntityMediator:
     @staticmethod
     def verify_health(entity_list: list[Entity]):
         for entity in entity_list:
-            if entity.health <= 0 and not isinstance(entity, Background):
-                entity_list.remove(entity)
+            if entity.health > 0 or isinstance(entity, Background): continue
+
+            if isinstance(entity, Foe):
+                EntityMediator.__give_score(entity, entity_list)
+
+            entity_list.remove(entity)

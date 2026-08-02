@@ -7,7 +7,7 @@ from pygame import Surface, Rect
 from pygame.font import Font
 
 from code.Const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS, MAIN_MENU_OPT, \
-    FOE_EVENT, FOE_SPAWNING_INTERVAL
+    FOE_EVENT, FOE_SPAWNING_INTERVAL, WIN_WIDTH
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 from code.EntityMediator import EntityMediator
@@ -50,6 +50,32 @@ class Level:
                     shot = entity.shoot()
                     if shot is not None:
                         self.entity_list.append(shot)
+                if entity.name == 'player1_ship':
+                    self.level_text(
+                        text_size= 14,
+                        text= f'Player 1 Health: {entity.health}',
+                        text_color= NEON_PINK,
+                        text_pos= (10, WIN_HEIGHT - 60)
+                    )
+                    self.level_text(
+                        text_size=14,
+                        text=f'Score: {entity.score}',
+                        text_color=NEON_PINK,
+                        text_pos=(10, WIN_HEIGHT - 30)
+                    )
+                if entity.name == 'player2_ship':
+                    self.level_text(
+                        text_size=14,
+                        text=f'Player 2 Health: {entity.health}',
+                        text_color=NEON_PINK,
+                        text_pos=(WIN_WIDTH - 230, WIN_HEIGHT - 60)
+                    )
+                    self.level_text(
+                        text_size=14,
+                        text=f'Score: {entity.score}',
+                        text_color=NEON_PINK,
+                        text_pos=(WIN_WIDTH - 230, WIN_HEIGHT - 30)
+                    )
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -60,8 +86,9 @@ class Level:
 
             # UI
             self.level_text(18, f'{self.name} - Timeout: {self.timeout / 1000 : .1f}s', NEON_PINK, (10, 10))
-            self.level_text(14, f'fps: {clock.get_fps():.0f}', NEON_PINK, (10, WIN_HEIGHT - 35))
-            self.level_text(14, f'entities: {len(self.entity_list)}', NEON_PINK, (10, WIN_HEIGHT - 20))
+            # self.level_text(14, f'fps: {clock.get_fps():.0f}', NEON_PINK, (10, WIN_HEIGHT - 35)) # debug
+            # self.level_text(14, f'entities: {len(self.entity_list)}', NEON_PINK, (10, WIN_HEIGHT - 20)) # debug
+
             pygame.display.flip() # refresh
 
             # Entity mediator - entity damage and destruction

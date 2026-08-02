@@ -3,7 +3,7 @@
 import random
 
 from code.Const import FOE_SHIP_DICT, BACKGROUND_SPEED, WIN_WIDTH, FOE_SPEED_MULTIPLIER, ENTITY_DEFAULT_HEALTH, \
-    FOE_SHOT_DELAY, ENTITY_DEFAULT_DAMAGE
+    FOE_SHOT_DELAY, ENTITY_DEFAULT_DAMAGE, FOE_SCORE
 from code.Entity import Entity
 from code.FoeShot import FoeShot
 
@@ -17,7 +17,8 @@ class Foe(Entity):
             name=f'{name}_ship_{foe_ship_size}',
             position=position,
             health=ENTITY_DEFAULT_HEALTH[f'foe_{foe_ship_size}'],
-            damage=ENTITY_DEFAULT_DAMAGE[f'foe_{foe_ship_size}']
+            damage=ENTITY_DEFAULT_DAMAGE[f'foe_{foe_ship_size}'],
+            score=FOE_SCORE[f'foe_{foe_ship_size}']
             )
         self.current_foe_speed = FOE_SHIP_DICT[foe_ship_size]
         self.shot_timer = FOE_SHOT_DELAY

@@ -11,6 +11,7 @@ class Background(Entity):
             position=position,
             health=0,
             damage=0,
+            score=0,
             auto_stretch=True
         )
 

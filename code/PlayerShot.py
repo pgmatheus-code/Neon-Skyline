@@ -8,7 +8,8 @@ class PlayerShot(Entity):
             name=name,
             position=position,
             health=ENTITY_DEFAULT_HEALTH['shot'],
-            damage=ENTITY_DEFAULT_DAMAGE['player_shot']
+            damage=ENTITY_DEFAULT_DAMAGE['player_shot'],
+            score=0
         )
 
     def move(self):
