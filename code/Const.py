@@ -47,7 +47,10 @@ BACKGROUND_SPEED = {
 }
 
 # entity defaults
-SHOT_DEFAULT_SPEED = 20
+PLAYER_SHOT_DELAY = 10
+FOE_SHOT_DELAY = 10
+SHOT_DEFAULT_SPEED = 10
+
 ENTITY_DEFAULT_HEALTH = {
     'player': 300,
     'foe_small_1': 50,

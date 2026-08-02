@@ -46,7 +46,7 @@ class Level:
 
                 self.window.blit(source=entity.surf, dest=entity.rect) # apply
                 entity.move() # movement
-                if isinstance(entity, (Player)):
+                if isinstance(entity, (Player, Foe)):
                     shot = entity.shoot()
                     if shot is not None:
                         self.entity_list.append(shot)
