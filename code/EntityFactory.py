@@ -16,7 +16,7 @@ class EntityFactory:
             case 'city1' | 'city2' | 'city3' | 'city4':
                 list_bg = []
                 for i in range(8):
-                    list_bg.append(Background(name=f'{entity_name}/layer{i + 1}', position=(0,0)))
+                    list_bg.append(Background(name=f'{entity_name}/layer{i + 1}', position=(0, 0)))
                     list_bg.append(Background(name=f'{entity_name}/layer{i + 1}', position=(WIN_WIDTH, 0)))
                 return list_bg
             case 'player1':

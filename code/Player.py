@@ -21,7 +21,6 @@ class Player(Entity):
         self.shot_timer = PLAYER_SHOT_DELAY
         self.is_shot_ready = False
 
-
     def move(self):
         pressed_key = pygame.key.get_pressed()
         player_name = self.name[:7]

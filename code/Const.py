@@ -147,29 +147,29 @@ DIGIT_LIMIT = 10
 # player defaults
 PLAYER_SPEED = 5
 # key binding
-KEY_UP =\
+KEY_UP = \
     {
         'player1': pygame.K_w,
         'player2': pygame.K_UP
     }
 
-KEY_DOWN =\
+KEY_DOWN = \
     {
         'player1': pygame.K_s,
         'player2': pygame.K_DOWN
     }
 
-KEY_LEFT =\
+KEY_LEFT = \
     {
         'player1': pygame.K_a,
         'player2': pygame.K_LEFT
     }
-KEY_RIGHT =\
+KEY_RIGHT = \
     {
         'player1': pygame.K_d,
         'player2': pygame.K_RIGHT
     }
-KEY_SHOOT =\
+KEY_SHOOT = \
     {
         'player1': pygame.K_SPACE,
         'player2': pygame.K_KP_PLUS

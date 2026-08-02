@@ -31,9 +31,9 @@ class Scoreboard:
 
             title_text = 'SCOREBOARD'
             subtitle_text = ''
-            score=''
+            score = ''
 
-            if game_mode == MAIN_MENU_OPT[0]: # 1P
+            if game_mode == MAIN_MENU_OPT[0]:  # 1P
                 title_text = 'GAME OVER (One Player)'
                 score = player_score[0]
                 subtitle_text = f'Enter player 1 name <{DIGIT_LIMIT} digits>:'
@@ -53,7 +53,7 @@ class Scoreboard:
 
             if game_mode == MAIN_MENU_OPT[2]:  # 2P COOP
                 title_text = 'GAME OVER (2 Players COOP)'
-                score = (player_score[0] + player_score[1]) / 2 # average of both
+                score = (player_score[0] + player_score[1]) / 2  # average of both
                 subtitle_text = f'Enter team name <{DIGIT_LIMIT} digits>s:'
 
             title_text += f' - {score} PTS'
@@ -77,14 +77,14 @@ class Scoreboard:
             )
 
             for event in pygame.event.get():
-                if event.type == pygame.QUIT: # standard quit event (to avoid window freeze)
+                if event.type == pygame.QUIT:  # standard quit event (to avoid window freeze)
                     pygame.quit()
                     sys.exit()
 
-                elif event.type == pygame.KEYDOWN: # read input
+                elif event.type == pygame.KEYDOWN:  # read input
                     if event.key == pygame.K_RETURN:
                         if 0 < len(winner_name) <= DIGIT_LIMIT:
-                            db_proxy.save({'name': winner_name,'score': score, 'date': get_formatted_date()})
+                            db_proxy.save({'name': winner_name, 'score': score, 'date': get_formatted_date()})
                             self.show()
                             return
                     elif event.key == pygame.K_BACKSPACE:
@@ -110,7 +110,6 @@ class Scoreboard:
         pygame.mixer.music.load('./assets/sounds/endgame.mp3')
         pygame.mixer.music.play(-1)  # minus one for loop
         self.window.blit(source=self.background, dest=self.rect)
-
 
         # title
         self.scoreboard_text(
@@ -148,10 +147,10 @@ class Scoreboard:
 
         while True:
             for event in pygame.event.get():
-                if event.type == pygame.QUIT: # standard quit event (to avoid window freeze)
+                if event.type == pygame.QUIT:  # standard quit event (to avoid window freeze)
                     pygame.quit()
                     sys.exit()
-                elif event.type == pygame.KEYDOWN: # read input
+                elif event.type == pygame.KEYDOWN:  # read input
                     if event.key == pygame.K_ESCAPE or event.key == pygame.K_RETURN:
                         return
 
@@ -171,6 +170,7 @@ class Scoreboard:
         text_surface: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surface.get_rect(center=text_pos)
         self.window.blit(source=text_surface, dest=text_rect)
+
 
 def get_formatted_date():
     current_datetime = datetime.now()

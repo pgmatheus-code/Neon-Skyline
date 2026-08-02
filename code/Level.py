@@ -72,10 +72,10 @@ class Level:
                 # player hud
                 if entity.name == 'player1_ship':
                     self.level_text(
-                        text_size= 14,
-                        text= f'Player 1 Health: {entity.health}',
-                        text_color= NEON_PINK,
-                        text_pos= (10, WIN_HEIGHT - 60)
+                        text_size=14,
+                        text=f'Player 1 Health: {entity.health}',
+                        text_color=NEON_PINK,
+                        text_pos=(10, WIN_HEIGHT - 60)
                     )
                     self.level_text(
                         text_size=14,
@@ -140,7 +140,7 @@ class Level:
             # self.level_text(14, f'fps: {clock.get_fps():.0f}', NEON_PINK, (10, WIN_HEIGHT - 35)) # debug
             # self.level_text(14, f'entities: {len(self.entity_list)}', NEON_PINK, (10, WIN_HEIGHT - 20)) # debug
 
-            pygame.display.flip() # refresh
+            pygame.display.flip()  # refresh
 
             # Entity mediator - entity damage and destruction
             EntityMediator.verify_collision(entity_list=self.entity_list)

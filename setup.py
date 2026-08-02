@@ -21,8 +21,8 @@ if sys.platform == "win32":
 executables = [
     Executable(
         script='main.py',
-        target_name='Neon Skyline.exe',   # custom exe name
-        icon='icon.ico'               # path to your .ico file
+        target_name='Neon Skyline.exe',  # custom exe name
+        icon='icon.ico'  # path to your .ico file
     )
 ]
 
