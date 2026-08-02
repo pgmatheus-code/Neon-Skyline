@@ -18,15 +18,14 @@ class Game:
             menu = Menu(self.window)
             menu_return = menu.run()
 
-            if menu_return == MAIN_MENU_OPT[0]: # new game - 1P
-                level = Level(self.window, 'Level1', menu_return)
-                level_return = level.run()
-            if menu_return == MAIN_MENU_OPT[1]: # new game - 2P VS
-                level = Level(self.window, 'Level1', menu_return)
-                level_return = level.run()
-            if menu_return == MAIN_MENU_OPT[2]: # new game - 2P COOP
-                level = Level(self.window, 'Level1', menu_return)
-                level_return = level.run()
+            if menu_return in [MAIN_MENU_OPT[0], MAIN_MENU_OPT[1], MAIN_MENU_OPT[2]]: # new game
+                player_score = [0, 0] # [player1, player2]
+                level = Level(self.window, 'city1', menu_return, player_score)
+                level_return = level.run(player_score)
+                if level_return:
+                    level = Level(self.window, 'city2', menu_return, player_score)
+                    level_return = level.run(player_score)
+
             if menu_return == MAIN_MENU_OPT[3]: # scoreboard
                 pass
             if menu_return == MAIN_MENU_OPT[4]: # quit game

@@ -70,7 +70,7 @@ class Menu:
                 font_path=FONT_SMALLFONTS,
                 text_size=SIGN_SIZE,
                 text=sign_str,
-                text_color=NEON_PINK,
+                text_color=NEON_PURPLE,
                 text_pos=(sign_x, sign_y)
             )
             # draw everything
@@ -106,11 +106,11 @@ class Menu:
     def menu_text(self, font_path: str, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         text_font: pygame.font.Font = pygame.font.Font(font_path, text_size)
 
-        # shadow
-        text_shadow2_surface: Surface = text_font.render(text, True, SHADOW_COLOR).convert_alpha()
-        text_shadow2_rect: Rect = text_shadow2_surface.get_rect(
-            center=(text_pos[0] - SHADOW_DIRECTION[0], text_pos[1] - SHADOW_DIRECTION[1]))
-        self.window.blit(source=text_shadow2_surface, dest=text_shadow2_rect)
+        # # shadow
+        # text_shadow2_surface: Surface = text_font.render(text, True, SHADOW_COLOR).convert_alpha()
+        # text_shadow2_rect: Rect = text_shadow2_surface.get_rect(
+        #     center=(text_pos[0] - SHADOW_DIRECTION[0], text_pos[1] - SHADOW_DIRECTION[1]))
+        # self.window.blit(source=text_shadow2_surface, dest=text_shadow2_rect)
 
         # shadow
         text_shadow_surface: Surface = text_font.render(text, True, SHADOW_COLOR).convert_alpha()
