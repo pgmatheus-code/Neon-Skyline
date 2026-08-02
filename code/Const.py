@@ -83,7 +83,7 @@ ENTITY_DEFAULT_DAMAGE = {
 }
 
 # foes
-FOE_SPAWNING_INTERVAL = 3000
+FOE_SPAWNING_INTERVAL = 1000
 FOE_EVENT = pygame.USEREVENT + 1
 FOE_SPEED_MULTIPLIER = 2
 FOE_SHIP_DICT = {
@@ -108,11 +108,33 @@ FOE_SCORE = {
     'foe_large_3': 100,
 }
 
+# score style
+SCORE_POS = {
+    'Title': (WIN_WIDTH / 2, 20),
+    'Subtitle': (WIN_WIDTH / 2, 60),
+    'Input': (WIN_WIDTH / 2, 100),
+    'Label': (WIN_WIDTH / 2, 85),
+    'Name': (WIN_WIDTH / 2, 110),
+    0: (WIN_WIDTH / 2, 110),
+    1: (WIN_WIDTH / 2, 130),
+    2: (WIN_WIDTH / 2, 150),
+    3: (WIN_WIDTH / 2, 170),
+    4: (WIN_WIDTH / 2, 190),
+    5: (WIN_WIDTH / 2, 210),
+    6: (WIN_WIDTH / 2, 230),
+    7: (WIN_WIDTH / 2, 250),
+    8: (WIN_WIDTH / 2, 270),
+    9: (WIN_WIDTH / 2, 290),
+}
+
 # global level settings
 LEVEL_FPS = 60
 STANDARD_TIMEOUT = 60000
 TIMEOUT_STEP = 100
 TIMEOUT_EVENT = pygame.USEREVENT + 2
+
+# digit limit for scoreboard
+DIGIT_LIMIT = 10
 
 # player defaults
 PLAYER_SPEED = 5

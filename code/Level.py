@@ -92,7 +92,7 @@ class Level:
                     )
                     self.level_text(
                         text_size=14,
-                        text=f'Score: {entity.score}',
+                        text=f'Score: {entity.score} PTS',
                         text_color=NEON_PINK,
                         text_pos=(WIN_WIDTH - 230, WIN_HEIGHT - 30)
                     )
@@ -100,7 +100,7 @@ class Level:
             # get any pygame event
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
-                    # standard quit event
+                    # standard quit event (to avoid window freeze)
                     pygame.quit()
                     sys.exit()
                 if event.type == FOE_EVENT:
@@ -133,9 +133,9 @@ class Level:
 
             # level hud
             if self.timeout >= 10_000:
-                timeout_formatted = f'{self.timeout / 1000 : .0f}s'
+                timeout_formatted = f'{self.timeout / 1000 : .0f} seconds'
             else:
-                timeout_formatted = f'{self.timeout / 1000 : .1f}s'
+                timeout_formatted = f'{self.timeout / 1000 : .1f} seconds'
 
             self.level_text(18, f'{self.name} - Timeout: {timeout_formatted}', NEON_PINK, (10, 10))
             # self.level_text(14, f'fps: {clock.get_fps():.0f}', NEON_PINK, (10, WIN_HEIGHT - 35)) # debug
