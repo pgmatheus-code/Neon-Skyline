@@ -19,7 +19,7 @@ class Menu:
         self.background = pygame.transform.scale(self.background, self.window.get_size())
         self.rect = self.background.get_rect(topleft=(0, 0))
 
-        # background
+        # logo
         self.logo = pygame.image.load('./assets/sprites/logo.png').convert_alpha()
         self.logo = pygame.transform.scale(self.logo, size=(LOGO_WIDTH, LOGO_HEIGHT))
         self.small_rect = self.logo.get_rect(
@@ -30,8 +30,7 @@ class Menu:
 
         # music
         pygame.mixer.music.load('./assets/sounds/main_menu.mp3')
-        pygame.mixer.music.play(-1) # minus one for loop
-
+        pygame.mixer.music.play(-1)  # minus one for loop
 
         while True:
             # DRAW -----------------------------------------------------------------------------------------------------
@@ -73,7 +72,7 @@ class Menu:
                 text_color=NEON_PURPLE,
                 text_pos=(sign_x, sign_y)
             )
-            # draw everything
+            # update display
             pygame.display.flip()
 
             # EVENTS ---------------------------------------------------------------------------------------------------
@@ -105,12 +104,6 @@ class Menu:
 
     def menu_text(self, font_path: str, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         text_font: pygame.font.Font = pygame.font.Font(font_path, text_size)
-
-        # # shadow
-        # text_shadow2_surface: Surface = text_font.render(text, True, SHADOW_COLOR).convert_alpha()
-        # text_shadow2_rect: Rect = text_shadow2_surface.get_rect(
-        #     center=(text_pos[0] - SHADOW_DIRECTION[0], text_pos[1] - SHADOW_DIRECTION[1]))
-        # self.window.blit(source=text_shadow2_surface, dest=text_shadow2_rect)
 
         # shadow
         text_shadow_surface: Surface = text_font.render(text, True, SHADOW_COLOR).convert_alpha()
