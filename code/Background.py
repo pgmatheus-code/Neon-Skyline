@@ -5,7 +5,14 @@ from code.Entity import Entity
 
 class Background(Entity):
     def __init__(self, name: str, position: tuple):
-        super().__init__(entity_type='background', name=name, position=position, health=999, auto_stretch=True)
+        super().__init__(
+            entity_type='background',
+            name=name,
+            position=position,
+            health=0,
+            damage=0,
+            auto_stretch=True
+        )
 
     def move(self):
         layer_name = self.name[6:]

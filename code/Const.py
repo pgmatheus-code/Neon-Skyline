@@ -64,6 +64,23 @@ ENTITY_DEFAULT_HEALTH = {
     'shot' : 1,
 }
 
+ENTITY_DEFAULT_DAMAGE = {
+    'player': 1,
+    'foe_small_1': 50,
+    'foe_small_2': 50,
+    'foe_medium_1': 50,
+    'foe_medium_2': 50,
+    'foe_medium_3': 50,
+    'foe_large_1': 50,
+    'foe_large_2': 50,
+    'foe_large_3': 50,
+
+    'player_shot': 50,
+    'foe_ship_small_shot': 5,
+    'foe_ship_medium_shot': 10,
+    'foe_ship_large_shot': 20,
+}
+
 # foes
 FOE_SPAWNING_INTERVAL = 3000
 FOE_EVENT = pygame.USEREVENT + 1

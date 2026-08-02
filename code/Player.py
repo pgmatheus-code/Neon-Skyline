@@ -2,14 +2,21 @@
 # -*- coding: utf-8 -*-
 import pygame
 from code.Const import PLAYER_SPEED, KEY_LEFT, KEY_RIGHT, KEY_UP, KEY_DOWN, KEY_SHOOT, WIN_HEIGHT, WIN_WIDTH, \
-    ENTITY_DEFAULT_HEALTH, PLAYER_SHOT_DELAY
+    ENTITY_DEFAULT_HEALTH, PLAYER_SHOT_DELAY, ENTITY_DEFAULT_DAMAGE
 from code.Entity import Entity
 from code.PlayerShot import PlayerShot
 
 
 class Player(Entity):
     def __init__(self, name: str, position: tuple):
-        super().__init__(entity_type='ship', name=f'{name}_ship', position=position, health=ENTITY_DEFAULT_HEALTH['player'])
+        super().__init__(
+            entity_type='ship',
+            name=f'{name}_ship',
+            position=position,
+            health=ENTITY_DEFAULT_HEALTH['player'],
+            damage=ENTITY_DEFAULT_DAMAGE['player']
+        )
+
         self.shot_timer = PLAYER_SHOT_DELAY
         self.is_shot_ready = False
 
