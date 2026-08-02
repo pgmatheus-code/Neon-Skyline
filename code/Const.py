@@ -12,6 +12,14 @@ LOGO_HEIGHT = 210
 FONT_SMALLFONTS = './assets/fonts/BULKYPIX.TTF'
 FONT_LARGEFONTS = './assets/fonts/acknowtt.ttf'
 
+# city names
+CITIES_DICT = {
+    'city1' : 'Neo Los Angeles',
+    'city2' : 'Tokyo Nexus',
+    'city3' : 'Chicago Overdrive',
+    'city4' : 'Detroit Steel',
+}
+
 # color
 NEON_SALMON = (255,231,189)
 NEON_PURPLE = (91,0,180)

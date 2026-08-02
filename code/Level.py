@@ -8,7 +8,7 @@ from pygame import Surface, Rect
 from pygame.font import Font
 
 from code.Const import FONT_SMALLFONTS, STANDARD_TIMEOUT, WIN_HEIGHT, NEON_PURPLE, NEON_PINK, LEVEL_FPS, MAIN_MENU_OPT, \
-    FOE_EVENT, FOE_SPAWNING_INTERVAL, WIN_WIDTH, TIMEOUT_EVENT, TIMEOUT_STEP
+    FOE_EVENT, FOE_SPAWNING_INTERVAL, WIN_WIDTH, TIMEOUT_EVENT, TIMEOUT_STEP, CITIES_DICT
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 from code.EntityMediator import EntityMediator
@@ -130,14 +130,13 @@ class Level:
                 if not found_player:
                     return False
 
-
             # level hud
             if self.timeout >= 10_000:
                 timeout_formatted = f'{self.timeout / 1000 : .0f} seconds'
             else:
                 timeout_formatted = f'{self.timeout / 1000 : .1f} seconds'
 
-            self.level_text(18, f'{self.name} - Timeout: {timeout_formatted}', NEON_PINK, (10, 10))
+            self.level_text(18, f'{CITIES_DICT[self.name]} - Timeout: {timeout_formatted}', NEON_PINK, (10, 10))
             # self.level_text(14, f'fps: {clock.get_fps():.0f}', NEON_PINK, (10, WIN_HEIGHT - 35)) # debug
             # self.level_text(14, f'entities: {len(self.entity_list)}', NEON_PINK, (10, WIN_HEIGHT - 20)) # debug
 
