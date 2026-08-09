@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ba69b75d-40cd-4017-8ec3-4efa44fa9210" name="Changes" comment="- Minor fixes.">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PyGame.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Foe.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Foe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature_menu" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pgmatheus-code&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pgmatheus-code/Neon-Skyline.git&quot;,
+    &quot;accountId&quot;: &quot;dec2054e-9911-4933-8b2a-bd4d90faa7a1&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3H4MBqdUEr3kN32ix2T8dVGdNz0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/pgmat/OneDrive/Meus Estudos/BES/Disciplinas/19. LProg/Neon-Skyline",
+    "settings.editor.selected.configurable": "preferences.keymap"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pgmat\OneDrive\Meus Estudos\BES\Disciplinas\19. LProg\PyGame\assets\sprites\background" />
+      <recent name="C:\Users\pgmat\OneDrive\Meus Estudos\BES\Disciplinas\19. LProg\PyGame\assets\sprites\shot" />
+      <recent name="C:\Users\pgmat\OneDrive\Meus Estudos\BES\Disciplinas\19. LProg\PyGame\assets\sprites\scenery" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pgmat\OneDrive\Meus Estudos\BES\Disciplinas\19. LProg\PyGame" />
+      <recent name="C:\Users\pgmat\OneDrive\Meus Estudos\BES\Disciplinas\19. LProg\PyGame\assets\sounds" />
+      <recent name="C:\Users\pgmat\OneDrive\Meus Estudos\BES\Disciplinas\19. LProg\PyGame\assets\sound" />
+      <recent name="C:\Users\pgmat\OneDrive\Meus Estudos\BES\Disciplinas\19. LProg\PyGame\assets\sprites" />
+      <recent name="C:\Users\pgmat\OneDrive\Meus Estudos\BES\Disciplinas\19. LProg\PyGame\code" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PyGame" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba69b75d-40cd-4017-8ec3-4efa44fa9210" name="Changes" comment="" />
+      <created>1785122758320</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1785122758320</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1785290414042</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1785290414042</updated>
+    </task>
+    <task id="LOCAL-00002" summary="- Added classes generated from StarUML.">
+      <option name="closed" value="true" />
+      <created>1785297005367</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1785297005367</updated>
+    </task>
+    <task id="LOCAL-00003" summary="- Added classes generated from StarUML.">
+      <option name="closed" value="true" />
+      <created>1785297081543</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1785297081543</updated>
+    </task>
+    <task id="LOCAL-00004" summary="- Added classes generated from StarUML.">
+      <option name="closed" value="true" />
+      <created>1785297175136</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1785297175136</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- The main loop has been created.&#10;- Implemented connection between menu and game classes.">
+      <option name="closed" value="true" />
+      <created>1785297856855</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1785297856855</updated>
+    </task>
+    <task id="LOCAL-00006" summary="- Main menu design with logo.&#10;- Added sound assets.&#10;- Added const.py.">
+      <option name="closed" value="true" />
+      <created>1785303792775</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1785303792775</updated>
+    </task>
+    <task id="LOCAL-00007" summary="- Ship sprites redone.">
+      <option name="closed" value="true" />
+      <created>1785339118076</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1785339118076</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- Added two TTF fonts.">
+      <option name="closed" value="true" />
+      <created>1785343369781</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1785343369781</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- Implemented menu selection.&#10;- Changed some asset file names.&#10;- Implemented side scrolling parallax background.&#10;- Implemented first level base.">
+      <option name="closed" value="true" />
+      <created>1785387249147</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1785387249147</updated>
+    </task>
+    <task id="LOCAL-00010" summary="- Added level hud.&#10;- Unified text shadow projection.">
+      <option name="closed" value="true" />
+      <created>1785444823811</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1785444823811</updated>
+    </task>
+    <task id="LOCAL-00011" summary="- Added player ship movement.">
+      <option name="closed" value="true" />
+      <created>1785463162535</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1785463162535</updated>
+    </task>
+    <task id="LOCAL-00012" summary="- Added player ship movement.">
+      <option name="closed" value="true" />
+      <created>1785463175404</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1785463175404</updated>
+    </task>
+    <task id="LOCAL-00013" summary="- Implemented separate controls">
+      <option name="closed" value="true" />
+      <created>1785466189802</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1785466189802</updated>
+    </task>
+    <task id="LOCAL-00014" summary="- Implemented foe spawning&#10;- Changed directory files.">
+      <option name="closed" value="true" />
+      <created>1785470948903</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1785470948903</updated>
+    </task>
+    <task id="LOCAL-00015" summary="- Implemented mediator pattern for entity maintenance.">
+      <option name="closed" value="true" />
+      <created>1785613619016</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1785613619016</updated>
+    </task>
+    <task id="LOCAL-00016" summary="- Implemented player shot.">
+      <option name="closed" value="true" />
+      <created>1785616891774</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1785616891774</updated>
+    </task>
+    <task id="LOCAL-00017" summary="- Implemented foe shot.&#10;- Shots are being destroyed when out-of-bounds.">
+      <option name="closed" value="true" />
+      <created>1785629542697</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1785629542697</updated>
+    </task>
+    <task id="LOCAL-00018" summary="- Implemented collision damage.">
+      <option name="closed" value="true" />
+      <created>1785634531730</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1785634531730</updated>
+    </task>
+    <task id="LOCAL-00019" summary="- Implemented 2P health and score with hud.">
+      <option name="closed" value="true" />
+      <created>1785637006317</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1785637006317</updated>
+    </task>
+    <task id="LOCAL-00020" summary="- Implemented persistent score between levels.">
+      <option name="closed" value="true" />
+      <created>1785644730112</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1785644730112</updated>
+    </task>
+    <task id="LOCAL-00021" summary="- Added all cities.&#10;- Implemented SQLite3 via proxy.&#10;- Scoreboard database.&#10;- Scoreboard save and show window.">
+      <option name="closed" value="true" />
+      <created>1785702689672</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1785702689672</updated>
+    </task>
+    <task id="LOCAL-00022" summary="- Added all cities.&#10;- Implemented SQLite3 via proxy.&#10;- Scoreboard database.&#10;- Scoreboard save and show window.">
+      <option name="closed" value="true" />
+      <created>1785702707988</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1785702707988</updated>
+    </task>
+    <task id="LOCAL-00023" summary="- Defined city names via Const.py.">
+      <option name="closed" value="true" />
+      <created>1785703648556</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1785703648556</updated>
+    </task>
+    <task id="LOCAL-00024" summary="- Defined city names via Const.py.">
+      <option name="closed" value="true" />
+      <created>1785703734099</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1785703734099</updated>
+    </task>
+    <task id="LOCAL-00025" summary="- Defined city names via Const.py.">
+      <option name="closed" value="true" />
+      <created>1785703778681</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1785703778681</updated>
+    </task>
+    <task id="LOCAL-00026" summary="- Amend last commit">
+      <option name="closed" value="true" />
+      <created>1785703866350</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1785703866350</updated>
+    </task>
+    <task id="LOCAL-00027" summary="- Added README.md">
+      <option name="closed" value="true" />
+      <created>1785707431956</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1785707431956</updated>
+    </task>
+    <task id="LOCAL-00028" summary="- Added README.md">
+      <option name="closed" value="true" />
+      <created>1785707510637</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1785707510637</updated>
+    </task>
+    <task id="LOCAL-00029" summary="- Applied PEP8 fix using IDE help.">
+      <option name="closed" value="true" />
+      <created>1785707946905</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1785707946905</updated>
+    </task>
+    <task id="LOCAL-00030" summary="- Minor fixes.">
+      <option name="closed" value="true" />
+      <created>1785711175389</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1785711175389</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="- Added classes generated from StarUML." />
+    <MESSAGE value="- The main loop has been created.&#10;- Implemented connection between menu and game classes." />
+    <MESSAGE value="- Main menu design with logo.&#10;- Added sound assets.&#10;- Added const.py." />
+    <MESSAGE value="- Ship sprites redone." />
+    <MESSAGE value="- Added two TTF fonts." />
+    <MESSAGE value="- Implemented menu selection.&#10;- Changed some asset file names.&#10;- Implemented side scrolling parallax background.&#10;- Implemented first level base." />
+    <MESSAGE value="- Added level hud.&#10;- Unified text shadow projection." />
+    <MESSAGE value="- Added player ship movement." />
+    <MESSAGE value="- Implemented separate controls" />
+    <MESSAGE value="- Implemented foe spawning&#10;- Changed directory files." />
+    <MESSAGE value="- Implemented mediator pattern for entity maintenance." />
+    <MESSAGE value="- Implemented player shot." />
+    <MESSAGE value="- Implemented foe shot.&#10;- Shots are being destroyed when out-of-bounds." />
+    <MESSAGE value="- Implemented collision damage." />
+    <MESSAGE value="- Implemented 2P health and score with hud." />
+    <MESSAGE value="- Implemented persistent score between levels." />
+    <MESSAGE value="- Added all cities.&#10;- Implemented SQLite3 via proxy.&#10;- Scoreboard database.&#10;- Scoreboard save and show window." />
+    <MESSAGE value="- Defined city names via Const.py." />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
+    <MESSAGE value="- Amend last commit" />
+    <MESSAGE value="- Added README.md" />
+    <MESSAGE value="- Applied PEP8 fix using IDE help." />
+    <MESSAGE value="- Minor fixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Minor fixes." />
+  </component>
+</project>

@@ -28,7 +28,6 @@ class Foe(Entity):
         self.rect.centerx -= self.current_foe_speed * FOE_SPEED_MULTIPLIER  # scrolling movement
 
     def shoot(self):
-
         if self.shot_timer > 0:
             self.shot_timer -= 1
         else:
